@@ -30,7 +30,7 @@ app.use(bodyParser.json());
 
 const corsOptions = {
   // origin: ['https://ar-experts-demo.vercel.app', 'https://ar-experts-demo-jfmv.vercel.app'],
-  origin: ['http://13.41.240.168:5700'], 
+  origin: ['http://18.169.50.246:5700'], 
   credentials: true,
   methods: 'GET,HEAD,PUT,PATCH,POST,DELETE',
   allowedHeaders: ['Content-Type', 'Authorization'],
