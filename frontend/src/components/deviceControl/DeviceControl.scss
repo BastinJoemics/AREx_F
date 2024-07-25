@@ -1,0 +1,87 @@
+@import './variables.scss';
+
+.card {
+  @include glass-effect;
+  border-radius: 15px; /* Smoother rounded corners */
+  box-shadow: 0 8px 16px rgba(0, 0, 0, 0.2); /* Deeper shadow for a more prominent effect */
+  background: rgba(255, 255, 255, 0.1); /* Semi-transparent background for glass effect */
+  margin-bottom: 20px;
+  overflow: hidden; /* Ensure content stays within rounded corners */
+  padding: 20px;
+  animation: fadeIn 0.5s ease-in-out; /* Smooth fade-in animation */
+}
+
+.head {
+  color: #fff;
+  text-align: center;
+  font-size: 25px;
+  font-family: monospace;
+}
+
+.device-control-list {
+  display: flex; /* Enable flexbox */
+  flex-direction: column; /* Stack buttons vertically */
+  justify-content: center; /* Centers horizontally */
+  align-items: center; /* Centers vertically */
+}
+
+.device-control-container {
+  background: linear-gradient(135deg, #1f1c2c, #7362c5), url('../../assets/background-pattern.svg');
+  background-size: cover, cover;
+  background-blend-mode: overlay;
+
+
+  .device-control-button {
+    display: block;
+    width: 39%;
+    padding: 10px;
+    margin-bottom: 2px;
+    margin-top: 20px;
+    border: none;
+    border-radius: 5px;
+    background: linear-gradient(145deg, #e6e6e6, #ffffff);
+    box-shadow: 5px 5px 10px #201e1e, -5px -5px 10px #da88eb;
+    cursor: pointer;
+    transition: background 0.3s, transform 0.3s;
+
+    &:hover {
+      background: #e0e0e0;
+      transform: translateY(-2px);
+    }
+
+    &:active {
+      background: #d4d4d4;
+      transform: translateY(1px);
+    }
+
+    &.lock-btn {
+      background: linear-gradient(135deg, #1f1c2c, #7362c5);
+      color: aliceblue;
+    }
+
+    &.unlock-btn {
+      background: linear-gradient(135deg, #1f1c2c, #7362c5);
+      color: aliceblue;
+    }
+
+    &.block-btn {
+      background: linear-gradient(135deg, #1f1c2c, #7362c5);
+      color: aliceblue;
+    }
+
+    &.unblock-btn {
+      background: linear-gradient(135deg, #1f1c2c, #7362c5);
+      color: aliceblue;
+    }
+
+    &.trunk-btn {
+      background: linear-gradient(135deg, #1f1c2c, #7362c5);
+      color: aliceblue;
+    }
+
+    &.toggle-block-btn {
+      background: linear-gradient(135deg, #1f1c2c, #7362c5);
+      color: aliceblue;
+    }
+  }
+}

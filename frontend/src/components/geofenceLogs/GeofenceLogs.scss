@@ -1,0 +1,106 @@
+@import '../deviceControl/variables.scss'; // Import variables and mixins
+
+.card {
+  border-radius: 10px;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+  backdrop-filter: blur(10px);
+  border: 1px solid rgba(255, 255, 255, 0.25);
+  padding: 20px;
+  margin-bottom: 20px;
+  animation: fadeIn 0.5s ease-in-out;
+}
+
+.geofence-logs-container{
+  background: linear-gradient(135deg, #1f1c2c, #7362c5), url('../../assets/background-pattern.svg');
+  background-size: cover, cover;
+  background-blend-mode: overlay;
+  border-radius: 20px; /* Match the border radius to the container */
+}
+
+.headdd {
+  color: #fff;
+  text-align: center;
+  font-size: 25px;
+  font-family: monospace;
+}
+
+.datePickerButton {
+  color: #ccbbd0;
+  font-size: 12px;
+  padding: 5px 10px;
+}
+
+.datePickerWrapper {
+  position: relative;
+  display: flex;
+  justify-content: center; /* Center horizontally */
+  align-items: center; /* Center vertically */
+  margin-top: 20px;}
+
+.datePickerWrapper .react-datepicker {
+  display: inline-block; /* Keep date picker inline */
+}
+
+.closeDatePickerButton {
+  background: transparent;
+  border: none;
+  color: $primary-color;
+  font-size: 3rem;
+  font-weight: bold;
+  position: absolute;
+  top: -10px; /* Adjust based on your design */
+  right: -10px; /* Adjust based on your design */
+  cursor: pointer;
+}
+
+.geofence-log-list {
+  list-style: none;
+  padding: 0;
+  max-height: 400px; /* Set a fixed height */
+  overflow-y: auto; /* Enable vertical scrolling */
+  padding-right: 15px; /* To avoid overlay on scrollbar */
+  
+
+p{
+  color: aliceblue;
+}
+
+  .log-item {
+    @include glass-effect;
+    padding: 10px;
+    margin: 10px 0;
+    animation: fadeIn 0.5s ease-in-out;
+    display: block;
+    border: none;
+    border-radius: 5px;
+    background: linear-gradient(135deg, #1f1c2c, #7362c5);
+    box-shadow: 5px 5px 10px #201e1e, -5px -5px 10px #da88eb;
+    transition: background 0.3s, transform 0.3s;
+    width: 100%;
+    max-width: 600px; /* Limit the maximum width */
+    text-align: center; /* Center the text within each log item */
+
+  }
+
+}
+
+/* Custom scroll bar styling */
+.geofence-log-list::-webkit-scrollbar {
+  width: 8px;
+}
+
+.geofence-log-list::-webkit-scrollbar-track {
+  background: rgba(255, 255, 255, 0.1);
+  border-radius: 10px;
+}
+
+.geofence-log-list::-webkit-scrollbar-thumb {
+  background: #a251b3;
+  box-shadow: 5px 5px 10px #d34f5d, -5px -5px 10px #a251b3;
+  border-radius: 10px;
+}
+
+.geofence-log-list::-webkit-scrollbar-thumb:hover {
+  background: #d34f5d;
+  box-shadow: 5px 5px 10px #d34f5d, -5px -5px 10px #a251b3;
+}

@@ -1,0 +1,122 @@
+@import '../../components/deviceControl/variables.scss'; // Import variables and mixins
+
+.auth-body {
+  background: linear-gradient(to right, #6a11cb, #2575fc);
+  font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+  color: #fff;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 100vh;
+  margin: 0;
+}
+
+.container-auth {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 100%;
+}
+
+.auth {
+  margin-top: 10%;
+  background: rgba(255, 255, 255, 0.1);
+  border-radius: 15px;
+  padding: 20px 30px;
+  box-shadow: 0 8px 32px rgba(0, 0, 0, 0.37);
+  backdrop-filter: blur(8.5px);
+  -webkit-backdrop-filter: blur(8.5px);
+  border: 1px solid rgba(255, 255, 255, 0.18);
+  max-width: 400px;
+  width: 100%;
+  text-align: center;
+}
+
+.auth h2 {
+  font-size: 2rem;
+  margin-bottom: 1.5rem;
+}
+
+.auth .form {
+  display: flex;
+  flex-direction: column;
+}
+
+.auth input[type="email"],
+.auth input[type="password"],
+.auth input[type="text"] {
+  width: 100%;
+  padding: 10px;
+  margin: 10px 0;
+  border: solid #20232a;
+  border-radius: 25px;
+  background: rgba(255, 255, 255, 0.2);
+  font-size: 1rem;
+}
+
+.auth input[type="email"]::placeholder,
+.auth input[type="password"]::placeholder,
+.auth input[type="text"]::placeholder {
+  color: #ccc;
+}
+
+.auth button {
+  width: 100%;
+  padding: 10px;
+  margin: 20px 0;
+  border: none;
+  border-radius: 25px;
+  background: #3498db;
+  color: #fff;
+  font-size: 1.2rem;
+  cursor: pointer;
+  transition: background 0.3s ease;
+}
+
+.auth button:hover {
+  background: #2575fc;
+}
+
+.auth .links {
+  display: flex;
+  justify-content: space-between;
+}
+
+.auth .links a {
+  color: #fff;
+  text-decoration: none;
+  transition: color 0.3s ease;
+}
+
+.auth .links a:hover {
+  color: #f0f0f0;
+}
+
+.auth .--flex-center {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  margin-bottom: 1.5rem;
+}
+
+.auth .register {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  margin-top: 1.5rem;
+}
+
+.auth .register p {
+  margin: 0 0.5rem;
+}
+
+.auth .register a {
+  color: #3498db;
+  text-decoration: none;
+  font-weight: bold;
+  transition: color 0.3s ease;
+}
+
+.auth .register a:hover {
+  color: #f0f0f0;
+}

@@ -1,0 +1,91 @@
+.cardd {
+  border-radius: 10px;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+  backdrop-filter: blur(10px);
+  border: 1px solid rgba(255, 255, 255, 0.25);
+  padding: 20px;
+  margin-bottom: 20px;
+  animation: fadeIn 0.5s ease-in-out;
+}
+
+.vehicle-efficiency-container {
+  background: linear-gradient(135deg, #1f1c2c, #7362c5), url('../../assets/background-pattern.svg');
+  background-size: cover, cover;
+  background-blend-mode: overlay;
+  color: #fff;
+  padding: 20px;
+  border-radius: 10px; // Adding rounded corners
+
+  h2 {
+    color: #fff;
+    text-align: center;
+    font-size: 25px;
+    font-family: monospace;
+  }
+
+  .gauges {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-around;
+    align-items: center;
+    
+  }
+
+  .gauge {
+    position: relative;
+    width: 150px;
+    height: 100px;
+    margin: 20px;
+
+    @media (max-width: 768px) {
+      width: 80px;
+      height: 80px;
+    }
+
+    &__svg {
+      width: 100%;
+      height: 100%;
+    }
+
+    &__background {
+      stroke: #706d6d;
+      stroke-width: 10;
+    }
+
+    &__fill {
+      stroke-width: 10;
+    }
+
+    &__needle {
+      transition: transform 0.3s;
+      stroke-linecap: round;
+      stroke-width: 3;
+      stroke: #fff;
+    }
+
+    &__value {
+      position: absolute;
+      top: 50%;
+      left: 50%;
+      transform: translate(-50%, -50%);
+      font-size: 1.5rem;
+      color: aliceblue; // Matching the reference text color
+
+      @media (max-width: 768px) {
+        font-size: 1rem;
+      }
+    }
+
+    &__label {
+      margin-top: 10px;
+      font-size: 15px;
+      font-family: monospace;
+      text-align: center;
+      color: aliceblue; // Matching the reference text color
+
+      @media (max-width: 768px) {
+        font-size: 0.8rem;
+      }
+    }
+  }
+}

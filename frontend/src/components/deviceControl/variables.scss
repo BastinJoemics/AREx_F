@@ -1,0 +1,45 @@
+// variables.scss
+
+// Color variables
+$primary-color: #3498db;
+$secondary-color: #2ecc71;
+$background-color: rgba(255, 255, 255, 0.1);
+$border-color: rgba(255, 255, 255, 0.25);
+$box-shadow-color: rgba(0, 0, 0, 0.1);
+
+// Mixin for glass effect
+@mixin glass-effect {
+  background: $background-color;
+  backdrop-filter: blur(10px);
+  border: 1px solid $border-color;
+  box-shadow: 0 4px 6px $box-shadow-color;
+  border-radius: 15px;
+}
+
+// Keyframes for fade-in animation
+@keyframes fadeIn {
+  from {
+    opacity: 0;
+    transform: translateY(-20px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+// General styles for buttons
+@mixin button-styles {
+  background-color: $primary-color;
+  color: #fff;
+  border: none;
+  border-radius: 10px;
+  padding: 10px 20px;
+  margin: 10px 0;
+  cursor: pointer;
+  transition: background-color 0.3s ease, transform 0.3s ease;
+  &:hover {
+    background-color: $secondary-color;
+    transform: scale(1.05);
+  }
+}

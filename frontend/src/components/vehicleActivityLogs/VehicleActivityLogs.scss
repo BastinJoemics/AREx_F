@@ -1,0 +1,146 @@
+@import '../deviceControl/variables.scss';
+
+
+
+  .vehicle-activity-logs {
+  padding: 20px;
+  border-radius: 10px;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+  background: linear-gradient(135deg, #1f1c2c, #7362c5), url('../../assets/background-pattern.svg');
+  background-size: cover, cover;
+  background-blend-mode: overlay;
+  border-radius: 20px; /* Match the border radius to the container */  
+
+  h2 {
+    color: #fff;
+    text-align: center;
+    font-size: 25px;
+    font-family: monospace;  }
+
+    .loading-spinner {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 200px;
+  }
+}
+
+.datePickerButton {
+  @include button-styles;
+  font-size: 0.9rem;
+  padding: 5px 10px;
+  text-align: center;
+  background: linear-gradient(145deg, #d34f5d, #a251b3);
+  box-shadow: 5px 5px 10px #d34f5d, -5px -5px 10px #a251b3;
+
+}
+
+.datePickerWrapper {
+  position: relative;
+  display: inline-block; /* Keep date picker inline */
+}
+
+.datePickerWrapper .react-datepicker {
+  display: inline-block; /* Keep date picker inline */
+}
+
+.closeDatePickerButton {
+  background: transparent;
+  border: none;
+  color: $primary-color;
+  font-size: 1.5rem;
+  font-weight: bold;
+  position: absolute;
+  top: -10px; /* Adjust based on your design */
+  right: -10px; /* Adjust based on your design */
+  cursor: pointer;
+}
+
+.vehicle-activity-log-list {
+  list-style: none;
+  padding: 0;
+  max-height: 400px; /* Set a fixed height */
+  overflow-y: auto; /* Enable vertical scrolling */
+  padding-right: 15px; /* To avoid overlay on scrollbar */
+
+  .log-entry {
+    ul {
+      p {
+        @include glass-effect;
+        padding: 10px;
+        margin: 10px 0;
+        animation: fadeIn 0.5s ease-in-out;
+        display: block;
+        border: none;
+        border-radius: 5px;
+        background: linear-gradient(135deg, #1f1c2c, #7362c5);
+        box-shadow: 5px 5px 10px #201e1e, -5px -5px 10px #da88eb;
+        transition: background 0.3s, transform 0.3s;
+        color: aliceblue;
+        &.engine-on {
+          background: linear-gradient(145deg, #831d0a, #e35955);
+          box-shadow: 5px 5px 10px #125a3a, -5px -5px 10px #ab150c;        }
+
+        &.engine-off {
+          background: linear-gradient(145deg, #258125, #24b224);
+          box-shadow: 5px 5px 10px #125a3a, -5px -5px 10px #72b351;
+        }
+
+        &.door-opened {
+          background: linear-gradient(145deg, #831d0a, #e35955);
+          box-shadow: 5px 5px 10px #125a3a, -5px -5px 10px #ab150c;        }
+
+        &.door-closed {
+          background: linear-gradient(145deg, #258125, #24b224);
+          box-shadow: 5px 5px 10px #125a3a, -5px -5px 10px #72b351;
+        }
+
+        &.vehicle-idling {
+          background: linear-gradient(145deg, #831d0a, #e35955);
+          box-shadow: 5px 5px 10px #125a3a, -5px -5px 10px #ab150c;        }
+
+        &.vehicle-not-idling {
+          background: linear-gradient(145deg, #258125, #24b224);
+          box-shadow: 5px 5px 10px #125a3a, -5px -5px 10px #72b351;
+        }
+      }
+    }
+  }
+
+  .log-item {
+    @include glass-effect;
+    padding: 10px;
+    margin: 10px 0;
+    animation: fadeIn 0.5s ease-in-out;
+  }
+
+  .log-item-green {
+    background-color: #d4fcd4;
+  }
+
+  .log-item-red {
+    background-color: #fcd4d4;
+  }
+}
+
+/* Custom scroll bar styling */
+.vehicle-activity-log-list::-webkit-scrollbar {
+  width: 8px;
+}
+
+.vehicle-activity-log-list::-webkit-scrollbar-track {
+  background: rgba(255, 255, 255, 0.1);
+  border-radius: 10px;
+}
+
+.vehicle-activity-log-list::-webkit-scrollbar-thumb {
+  background: #a251b3;
+  box-shadow: 5px 5px 10px #d34f5d, -5px -5px 10px #a251b3;
+  border-radius: 10px;
+}
+
+.vehicle-activity-log-list::-webkit-scrollbar-thumb:hover {
+  background: #d34f5d;
+  box-shadow: 5px 5px 10px #d34f5d, -5px -5px 10px #a251b3;
+
+}

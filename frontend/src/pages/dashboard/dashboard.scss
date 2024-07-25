@@ -1,0 +1,29 @@
+.dashboard {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  // background: linear-gradient(135deg, #ece9e6, #ffffff);
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+
+  .top-section, .bottom-section {
+    display: flex;
+    justify-content: space-between;
+    width: 100%;
+    margin-bottom: 20px;
+
+    & > * {
+      flex: 1;
+      margin: 0 10px;
+      border-radius: 10px;
+      box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+      padding: 20px;
+    }
+  }
+
+  .bottom-section {
+    .geofence-logs, .vehicle-efficiency {
+      flex: 1;
+      margin: 0 10px;
+    }
+  }
+}

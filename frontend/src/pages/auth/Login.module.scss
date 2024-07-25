@@ -1,0 +1,151 @@
+.authBody {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 100vh;
+  margin: 0;
+  background: 
+  linear-gradient(135deg, #1f1c2c, #7362c5);
+  box-shadow: 5px 5px 10px #d34f5d, -5px -5px 10px #a251b3;
+}
+
+.container {
+  display: flex;
+  width: 50%;
+  max-width: 1200px;
+  box-shadow: 0 0 20px rgba(0, 0, 0, 0.1);
+}
+
+
+.leftSide {
+  width: 50%;
+  background: 
+  linear-gradient(135deg, #1f1c2c, #7362c5), 
+  url('../../assets/login.png'); /* Ensure this path is correct */
+  box-shadow: 5px 5px 10px #d34f5d, -5px -5px 10px #a251b3;
+
+  background-size: cover, cover;
+  background-repeat: no-repeat, no-repeat;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  padding: 20px;
+  color: white;
+  text-align: center;
+  background-blend-mode: overlay;
+  position: relative;
+
+}
+
+.leftContent {
+  max-width: 80%;
+}
+
+.leftContent h1 {
+  font-size: 2rem;
+  margin-bottom: 1rem;
+}
+
+.leftContent p {
+  font-size: 1.2rem;
+}
+
+.rightSide {
+  width: 50%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  padding: 40px;
+   background: 
+  linear-gradient(135deg, #1f1c2c, #7362c5);
+  box-shadow: 5px 5px 10px #d34f5d, -5px -5px 10px #a251b3;
+
+  color: #f9f9f9;
+}
+
+.formContainer {
+  width: 100%;
+}
+
+.form {
+  max-width: 400px;
+  margin: auto;
+  text-align: center;
+}
+
+.icon {
+  margin-bottom: 20px;
+}
+
+h2 {
+  font-size: 1.5rem;
+  margin-bottom: 0.5rem;
+}
+
+p {
+  margin-bottom: 1.5rem;
+  color: #f9f9f9;
+}
+
+input[type="email"],
+input[type="password"] {
+  width: 100%;
+  padding: 10px;
+  margin: 10px 0;
+  border: 1px solid #ccc;
+  border-radius: 25px;
+  background: #f9f9f9;
+  font-size: 1rem;
+}
+
+.btn {
+  width: 100%;
+  padding: 10px;
+  background-color: #007bff;
+  color: white;
+  border: none;
+  cursor: pointer;
+  border-radius: 5px;
+}
+
+.btn:hover {
+  background-color: #0056b3;
+}
+
+.options {
+  display: flex;
+  justify-content: space-between;
+  width: 100%;
+  margin-top: 10px;
+}
+
+.googleSignIn {
+  margin-top: 20px;
+}
+
+.googleSignIn button {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding: 10px;
+  width: 100%;
+  background: #4285f4;
+  color: white;
+  border: none;
+  border-radius: 25px;
+  cursor: pointer;
+  font-size: 1rem;
+}
+
+.googleSignIn button img {
+  margin-right: 10px;
+}
+
+.signupLink {
+  margin-top: 20px;
+}
+
+.signupLink a {
+  color: #3498db;
+  text-decoration: none;
+}
